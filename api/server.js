@@ -96,7 +96,7 @@ server.put('/api/users/:id', async (req, res) => {
                    message: "The user with the specified ID does not exist" 
                 })
            } else {
-               res.json(deleteUser)
+            res.status(200).json(deleteUser)
            }
        } )
        .catch(err => {
